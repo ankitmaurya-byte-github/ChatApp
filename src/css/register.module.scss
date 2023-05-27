@@ -1,0 +1,64 @@
+
+@mixin border{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // box-sizing: border-box;
+    gap: 10px;
+}
+
+.registerContainer{
+    .logo{
+        font-size: 30px;
+        font-weight: 300;
+    }
+    background-color: rgb(212, 181, 241);
+    border-radius: 5px;
+    margin: 70px auto;
+    width: 250px;
+    padding: 10px 40px;
+    @include border;
+    form{
+        @include border;
+        width: 100%;
+        span{
+            color: red;
+        }
+        button{
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            border: none;
+            background-color: blueviolet;
+        }
+        // border: 2px solid red;
+        input{
+            &::placeholder{
+                color: red;
+            }
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 100%;
+           &:nth-child(4){
+
+               display: none;
+               
+            }
+        }
+        label{
+            // margin-left: -120px;
+            align-self: flex-start;
+            user-select: none;
+            // border:2px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: rgb(97, 97, 207);
+        }
+    }
+    
+    
+}
